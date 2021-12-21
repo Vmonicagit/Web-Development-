@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: green;
+   color: white;
+   text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="dashboard.html">Covid Dashboard</a>
+  <a href="#contact">Covid data analysis</a>
+  <a href="#about">About</a>
+</div>
+
+<div style="padding-left:16px">
+  <h2><a href="https://mobile.twitter.com/covidnewsbymib?lang=en">#IndiaFightsCorona</a></h2>
+
+</div>
+<h2 style="text-align:center">Covid Data analysis in India from the perspective of economy and health-care</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="age.jpg" style="width:30%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="ruralbeds.png" style="width:60%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="PUBLICBEDS.PNG" style="width:60%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="ICMR.PNG" style="width:60%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="ICMR2.PNG" style="width:60%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="URBANBEDS.PNG" style="width:60%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)"><img src="prev.jpg" style="width: 10%"></a>
+  <a class="next" onclick="plusSlides(1)"><img src="next.jpg" style="width: 10%"></a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="age.jpg" style="width:100%" onclick="currentSlide(1)" alt="Observation : We can see that most of the cases are of people 20-29 age range with the ranges 30-39, 40-49, 50-59, 60-69 also having a high number of cases."> Query - News has Reported that, Covid-19 is more likely to affect elder population compared to the youth, is that true? 
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="ruralbeds.png" style="width:100%" onclick="currentSlide(2)" alt="●  Tamil Nadu is the state with the most Beds in the rural areas with over 40000 beds.
+● Uttar Pradesh is a close second.
+● Karnataka, Rajasthan and west Bengal are having more than 20000 beds and stands in third position
+HENCE, WE DON'T NEED TO MIGRATE LABOURS FROM THESE 3 STATES AS THYE HAVE SUFFICIENT BEDS IN RURAL AREAS
+">  Analysis of number of public health facilities and number of beds: As The Prime Minister has asked you to plan the migration plans of the labours as it
+has become a huge problem, we want them to get the facilities but we have limited resources in cities, how will you handle this situation? 
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="PUBLICBEDS.png" style="width:100%" onclick="currentSlide(3)" alt="We have some states which have less number of total hospitals but most of them being in public access makes it easier for the lahours to approach like Andhra Pradesh.">Private Hospitals Cost of Treatment is Unaffordable for the Labours, Does all the above queries change there result when we try to focus on public hospitals as hospitals for the poor ?
+    </div> 
+    <div class="column">
+      <img class="demo cursor" src="ICMR.PNG" style="width:100%" onclick="currentSlide(4)" alt="Observation: Maharashtra has the most number of ICMR testing labs with 39 of them. Tamil nadu and Telangana are 2nd and 3rd with 26 and 19 respectively.">Analysis of ICMR testing Labs in the country
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="ICMR2.PNG" style="width:100%" onclick="currentSlide(5)" alt="Observation: Out of all the ICMR labs, around 180 are Government Labs and around 80 are Private Labs."> Government VS private labs
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="URBANBEDS.PNG" style="width:100%" onclick="currentSlide(6)" alt="● West Bengal has the most beds in Urban areas with almost 60000 beds.
+● Karnataka in second place with reaching 50000 beds. HENCE, THESE STATES NEED NOT TO SEND LABOURS HOME AS THEY HAVE SUFFICIENT BEDS IN CITIES. IN THIS WAY THEIR ECONOMY ALSO WON'T GET AFFECTED">Does Every City needs to evacuate the daily wage workers from the cities?
+    </div>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<div class="footer">
+  <p>Made By Monica Verma</p>
+</div>
+</body>
+</html>
